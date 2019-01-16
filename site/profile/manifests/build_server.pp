@@ -8,15 +8,14 @@ ensure => directory,
 file { 'c:/temp/Internal Tools Suite.msi':
 ensure => present,
 source => 'http://builds.infragistics.com/products/Tools/Internal%20Tools%20Suite.msi',
-checksum => 'md5',
 require => File['c:/temp'],
 }
 
   package { "infragistics internal tools suite":
   ensure => installed,
   source => 'c:/temp/Internal Tools Suite.msi',
-  install_options => [ '/qn', '/lvx* c:/temp/install_log.txt' ],
-  uninstall_options => [ '/x', '/qn', '/lvx* c:/temp/install_log.txt'],
+  install_options => [ '/qn' ],
+  uninstall_options => [ '/x', '/qn' ],
   require => File['c:/temp/Internal Tools Suite.msi'],
 }
 
