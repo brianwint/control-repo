@@ -9,4 +9,5 @@ forge "http://forge.puppetlabs.com"
 # mod 'puppet-logrotate'
 # mod "puppet/nginx"
 
+mod 'puppetlabs-powershell', '2.2.0'
 mod 'jpi-timezone_win', '0.1.5'
