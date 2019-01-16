@@ -2,7 +2,7 @@
 class profile::build_server{
 
 file { 'c:/temp':
-ensure => present,
+ensure => directory,
 }
 
 file { 'c:/temp/Internal Tools Suite.msi':
