@@ -13,10 +13,10 @@ require => File['c:/temp'],
 }
 
   package { "infragistics internal tools suite":
-  ensure => installed,
+  name => 'Infragistics Internal Tools Suite 1.0.1176',
+  ensure => '1.0.1176',
   source => 'c:/temp/Internal Tools Suite.msi',
-  install_options => [ '/lvx* c:/temp/install_log.txt' ],
-  uninstall_options => [ '/lvx* c:/temp/uninstall_log.txt'],
+  install_options => [ '/lvx*', 'c:/temp/install_log.txt' ],
   require => File['c:/temp/Internal Tools Suite.msi'],
 }
 
