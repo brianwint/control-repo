@@ -11,7 +11,7 @@ source => 'http://builds.infragistics.com/products/Tools/Internal%20Tools%20Suit
   source => 'c:/temp/Internal Tools Suite.msi',
   install_options => [ '/qn' ],
   uninstall_options => [ '/x', '/qn'],
-  require => File['internal-tools-suite-installer'],
+  require => File['c:/temp/Internal Tools Suite.msi'],
 }
 
 }
