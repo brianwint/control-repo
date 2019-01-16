@@ -4,7 +4,7 @@ class profile::build_server{
 file { 'internal-tools-suite-installer':
 path => 'C:/temp/Internal Tools Suite.msi',
 ensure => present,
-source => 'http://builds.infragistics.com/products/Tools/Internal Tools Suite.msi',
+source => 'http://builds.infragistics.com/products/Tools/Internal%20Tools%20Suite.msi',
 }
 
   package { "infragistics internal tools suite":
