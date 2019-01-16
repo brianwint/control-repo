@@ -8,7 +8,7 @@ ensure => directory,
 file { 'c:/temp/Internal Tools Suite.msi':
 ensure => file,
 source => 'http://builds.infragistics.com/products/Tools/Internal%20Tools%20Suite.msi',
-checksum => md5,
+checksum => ctime,
 require => File['c:/temp'],
 }
 
