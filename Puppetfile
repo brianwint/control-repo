@@ -8,3 +8,5 @@ forge "http://forge.puppetlabs.com"
 # mod "puppet/staging"
 # mod 'puppet-logrotate'
 # mod "puppet/nginx"
+
+mod 'jpi-timezone_win', '0.1.5'
