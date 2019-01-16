@@ -14,8 +14,8 @@ require => File['c:/temp'],
   package { "infragistics internal tools suite":
   ensure => installed,
   source => 'c:/temp/Internal Tools Suite.msi',
-  install_options => [ '/qn' ],
-  uninstall_options => [ '/x', '/qn'],
+  install_options => [ '/qn', '/lvx* c:/temp/install_log.txt' ],
+  uninstall_options => [ '/x', '/qn', '/lvx* c:/temp/install_log.txt'],
   require => File['c:/temp/Internal Tools Suite.msi'],
 }
 
