@@ -11,3 +11,5 @@ forge "http://forge.puppetlabs.com"
 
 mod 'puppetlabs-powershell', '2.2.0'
 mod 'jpi-timezone_win', '0.1.5'
+mod 'puppetlabs-mount_iso', '2.0.0'
+mod 'puppetlabs-windows'
