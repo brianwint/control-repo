@@ -1,4 +1,4 @@
-class vs2012::install inherits vs2012 {
+class vs2012::install {
 
 file { 'C:\temp\VS2012.5.iso':
   ensure => file,
