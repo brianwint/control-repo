@@ -1,4 +1,4 @@
-class IG_VS2012 {
+class ig_vs2012 {
 
 file { 'C:\temp\VS2012.5.iso':
   ensure => file,
