@@ -1,4 +1,4 @@
-class base::ig_vs2012 {
+class vs2012::install {
 
 file { 'C:\temp\VS2012.5.iso':
   ensure => file,
