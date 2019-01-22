@@ -1,7 +1,7 @@
-# Class: vs2012
+# Class: vs2010
 # ===========================
 #
-# Full description of class vs2012 here.
+# Full description of class vs2010 here.
 #
 # Parameters
 # ----------
@@ -28,7 +28,7 @@
 # --------
 #
 # @example
-#    class { 'vs2012':
+#    class { 'vs2010':
 #      servers => [ 'pool.ntp.org', 'ntp.local.company.com' ],
 #    }
 #
@@ -42,8 +42,7 @@
 #
 # Copyright 2019 Your name here, unless otherwise noted.
 #
-class vs2012 {
+class vs2010 {
 
-include vs2012::install
 
 }
