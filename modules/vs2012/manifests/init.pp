@@ -1,5 +1,5 @@
 class vs2012{
 
-include install
+include vs2012::install
 
 }
