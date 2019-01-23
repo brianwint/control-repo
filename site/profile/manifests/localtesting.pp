@@ -5,9 +5,10 @@ class profile::localtesting{
 #   source => '\\\\infragistics.local\igfiles\Software\Microsoft\Development\Visual Studio.NET 2012\Update 5\VS2012.5.iso',
 # }
 
-package { 'Y:\VS2010SP1dvd1\Setup.exe':
+package { 'Microsoft Visual Studio 2010 Premium - ENU':
   name => "Microsoft Visual Studio 2010 Premium - ENU",
   ensure => installed,
+  source => 'Y:/VS2010SP1dvd1/Setup.exe',
   install_options => [ '/log', 'c:/temp/vs2010_install_log.txt' ],
   }
 
