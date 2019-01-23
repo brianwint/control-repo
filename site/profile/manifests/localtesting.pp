@@ -9,7 +9,7 @@ package { 'vs2010base':
   name => 'Microsoft Visual Studio 2010 Premium - ENU',
   ensure => installed,
   source => 'Y:/VS2010Core/Setup/setup.exe',
-  install_options => [ '/q', '/UnattendFile', 'Y:/VS2010Core/Setup/vs2010options.ini' ],
+  install_options => [ '/q', '/UnattendFile', 'Y:\VS2010Core\Setup\vs2010options.ini' ],
   }
 
 package { 'vs2010sp1':
