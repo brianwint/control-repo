@@ -8,8 +8,16 @@ class profile::localtesting{
 package { 'Microsoft Visual Studio 2010 Premium - ENU':
   name => "Microsoft Visual Studio 2010 Premium - ENU",
   ensure => installed,
+  source => 'Y:/VS2010Core/Setup/setup.exe',
+  install_options => [ '/q', '/UnattendFile', 'Y:/VS2010Core/Setup/vs2010options.ini' ],
+  }
+
+package { 'Microsoft Visual Studio 2010 Premium SP1 - ENU':
+  name => "Microsoft Visual Studio 2010 Premium - ENU",
+  ensure => installed,
   source => 'Y:/VS2010SP1dvd1/Setup.exe',
-  install_options => [ '/log', 'c:/temp/vs2010_install_log.txt' ],
+  install_options => [ '/q', '/log', 'c:/temp/vs2010_sp1_install_log.txt' ],
+  require => Package['Microsoft Visual Studio 2010 Premium - ENU'],
   }
 
 # mount_iso { 'C:\temp\VS2012.5.iso':
