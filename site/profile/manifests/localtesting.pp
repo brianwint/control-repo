@@ -13,7 +13,7 @@ package { 'vs2010base':
   }
 
 package { 'vs2010sp1':
-  name => 'Microsoft Visual Studio 2010 Premium - ENU',
+  name => 'Microsoft Visual Studio 2010 Premium SP1 - ENU',
   ensure => installed,
   source => 'Y:/VS2010SP1dvd1/Setup.exe',
   install_options => [ '/q', '/log', 'c:/temp/vs2010_sp1_install_log.txt' ],
