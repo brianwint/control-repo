@@ -34,7 +34,7 @@ package { 'vs2017Enterprise':
   '-add', 'Microsoft.VisualStudio.Workload.ManagedDesktop;includeRecommended',
   '-add', 'Microsoft.VisualStudio.Component.TestTools.CodedUITest',
   '--norestart' ],
-  require => Exec['vs2017installer'],
+  #require => Exec['vs2017installer'],
   }
 
 # mount_iso { 'C:\temp\VS2012.5.iso':
