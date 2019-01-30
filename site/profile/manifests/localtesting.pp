@@ -28,7 +28,7 @@ exec { 'vs2017installer':
 
 package { 'vs2017Enterprise':
   name => 'Visual Studio Enterprise 2017',
-  ensure => installed,
+  ensure => '15.9.28307.344',
   source => 'C:\Program Files (x86)\Microsoft Visual Studio\Installer\vs_installer.exe',
   install_options => [ '--passive',
   '-add', 'Microsoft.VisualStudio.Workload.ManagedDesktop;includeRecommended',
