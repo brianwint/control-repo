@@ -23,7 +23,7 @@ class profile::localtesting{
 exec { 'vs2017installer':
   command => 'Y:/vs_enterprise.exe --passive',
   provider => powershell,
-  unless => 'Test-Path "C:\Program Files (x86)\Microsoft Visual Studio\Installer\vs_installer.exe"',
+  creates => 'C:\Program Files (x86)\Microsoft Visual Studio\Installer\vs_installer.exe',
 }
 
 package { 'vs2017Enterprise':
