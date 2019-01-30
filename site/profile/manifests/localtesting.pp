@@ -20,11 +20,11 @@ class profile::localtesting{
 #   require => Package['vs2010base'],
 #   }
 
-# exec { 'vs2017installer':
-#   command => 'Y:/vs_enterprise.exe --passive',
-#   provider => powershell,
-#   onlyif => 'if(Test-Path "C:\Program Files (x86)\Microsoft Visual Studio\Installer\vs_installer.exe") { exit 0 }',
-# }
+exec { 'vs2017installer':
+  command => 'Y:/vs_enterprise.exe --passive',
+  provider => powershell,
+  unless => 'Test-Path "C:\Program Files (x86)\Microsoft Visual Studio\Installer\vs_installer.exe"',
+}
 
 package { 'vs2017Enterprise':
   name => 'Visual Studio Enterprise 2017',
