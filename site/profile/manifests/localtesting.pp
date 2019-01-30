@@ -20,10 +20,16 @@ class profile::localtesting{
 #   require => Package['vs2010base'],
 #   }
 
+exec { 'vs2017installer':
+  command => 'Y:/vs_enterprise.exe --passive',
+  provider => powershell,
+  onlyif => 'if(Test-Path "C:\Program Files (x86)\Microsoft Visual Studio\Installer\vs_installer.exe") { exit 0 }',
+}
+
 package { 'vs2017Enterprise':
   name => 'Microsoft Visual Studio 2017 Enterprise - ENU',
   ensure => installed,
-  source => 'Y:/vs_enterprise.exe',
+  source => 'C:\Program Files (x86)\Microsoft Visual Studio\Installer\vs_installer.exe',
   install_options => [ '--passive',
   '-add', 'Microsoft.VisualStudio.Workload.ManagedDesktop;includeRecommended',
   '-add', 'Microsoft.VisualStudio.Component.TestTools.CodedUITest',
