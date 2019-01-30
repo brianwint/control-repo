@@ -27,13 +27,14 @@ exec { 'vs2017installer':
 }
 
 package { 'vs2017Enterprise':
-  name => 'Microsoft Visual Studio 2017 Enterprise - ENU',
+  name => 'Visual Studio Enterprise 2017',
   ensure => installed,
   source => 'C:\Program Files (x86)\Microsoft Visual Studio\Installer\vs_installer.exe',
   install_options => [ '--passive',
   '-add', 'Microsoft.VisualStudio.Workload.ManagedDesktop;includeRecommended',
   '-add', 'Microsoft.VisualStudio.Component.TestTools.CodedUITest',
   '--norestart' ],
+  require => Exec['vs2017installer'],
   }
 
 # mount_iso { 'C:\temp\VS2012.5.iso':
